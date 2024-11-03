@@ -65,3 +65,84 @@
     object-fit: cover;
     mask-image: linear-gradient(to bottom, black, black, black, black, black, transparent);
 }
+
+/*NAVBAR STYLE*/
+.navbar-bottom {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #212529;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    padding: 0;
+    z-index: 1000;
+}
+
+.nav-list {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 0;
+    padding: 0.5rem;
+    list-style: none;
+    width: 100%;
+    max-width: 100%;
+}
+
+.nav-item {
+    flex: 1;
+    text-align: center;
+}
+
+.nav-link {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    color: rgba(255,255,255,0.75);
+    text-decoration: none;
+    padding: 0.25rem;
+    transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+    color: #ffffff;
+}
+
+.nav-link i {
+    font-size: 1.25rem;
+    margin-bottom: 0.25rem;
+}
+
+.nav-label {
+    font-size: 0.7rem;
+    white-space: nowrap;
+}
+
+/* Add safe area padding for mobile devices */
+@supports(padding: max(0px)) {
+    .navbar-bottom {
+        padding-bottom: env(safe-area-inset-bottom, 0);
+    }
+}
+
+/* Responsive adjustments */
+@media (max-width: 360px) {
+    .nav-label {
+        font-size: 0.65rem;
+    }
+    
+    .nav-link i {
+        font-size: 1.1rem;
+    }
+}
+
+/* For landscape orientation on mobile */
+@media (max-height: 450px) {
+    .nav-list {
+        padding: 0.25rem;
+    }
+    
+    .nav-link i {
+        margin-bottom: 0.1rem;
+    }
+}
