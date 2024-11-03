@@ -25,3 +25,5 @@ document.addEventListener('DOMContentLoaded', () => {
     window.comment = comment;
     window.pagination = pagination;
 });
+
+

@@ -65,8 +65,6 @@
     object-fit: cover;
     mask-image: linear-gradient(to bottom, black, black, black, black, black, transparent);
 }
-
-/*NAVBAR STYLE*/
 .navbar-bottom {
     position: fixed;
     bottom: 0;
