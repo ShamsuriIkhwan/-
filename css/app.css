@@ -1,6 +1,7 @@
 @import url("common.css");
 @import url("animation.css");
 
+
 * {
     scrollbar-width: none;
     -ms-overflow-style: none;
@@ -65,6 +66,51 @@
     object-fit: cover;
     mask-image: linear-gradient(to bottom, black, black, black, black, black, transparent);
 }
+ /* Wrapper to handle the full animation width */
+ .animation-wrapper {
+    width: 100vw;  /* Full viewport width */
+    position: relative;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);  /* Center the wrapper */
+    background-color: transparent; /* Ensure no black background */
+}
+
+/*#svg-container {
+    width: 200px;  /* Reduced from 500px to 200px */
+   /* margin: 0 auto;
+    overflow: hidden;
+    position: relative;
+}*/
+#svg-container {
+    width: 200px;  /* Or your desired SVG size */
+    position: relative;
+    margin: 0 auto;
+    /* Start position offset to show full animation */
+    left: 50%;
+}
+/* Optional: If you want to control height explicitly */
+/*#svg-container svg {
+    display: auto;
+    width: 100%;
+    height: auto;
+    transform-origin: center;
+    /* Optional: Set max-height if needed */
+    /*max-height: 200px;
+}*/
+#svg-container svg {
+        display: block;
+        width: 100%;
+        height: auto;
+        transform-origin: center;
+    }
+/* Optional: Make it responsive for different screen sizes */
+@media (max-width: 768px) {
+    #svg-container {
+        width: 150px;  /* Even smaller on mobile */
+    }
+}
+
 .navbar-bottom {
     position: fixed;
     bottom: 0;
