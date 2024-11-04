@@ -67,14 +67,14 @@
     mask-image: linear-gradient(to bottom, black, black, black, black, black, transparent);
 }
  /* Wrapper to handle the full animation width */
- .animation-wrapper {
-    width: 100vw;  /* Full viewport width */
+ /*.animation-wrapper {
+    width: 100vw;  
     position: relative;
     overflow: hidden;
     left: 50%;
-    transform: translateX(-50%);  /* Center the wrapper */
-    background-color: transparent; /* Ensure no black background */
-}
+    transform: translateX(-50%);  
+    background-color: transparent; 
+}*/
 
 /*#svg-container {
     width: 200px;  /* Reduced from 500px to 200px */
@@ -82,34 +82,64 @@
     overflow: hidden;
     position: relative;
 }*/
-#svg-container {
-    width: 200px;  /* Or your desired SVG size */
+/*#svg-container {
+    width: 200px; 
     position: relative;
     margin: 0 auto;
-    /* Start position offset to show full animation */
     left: 50%;
-}
+}*/
 /* Optional: If you want to control height explicitly */
 /*#svg-container svg {
     display: auto;
     width: 100%;
     height: auto;
     transform-origin: center;
-    /* Optional: Set max-height if needed */
-    /*max-height: 200px;
+    max-height: 200px;
 }*/
-#svg-container svg {
+/*#svg-container svg {
         display: block;
         width: 100%;
         height: auto;
         transform-origin: center;
-    }
+    }*/
 /* Optional: Make it responsive for different screen sizes */
-@media (max-width: 768px) {
+/*@media (max-width: 768px) {
     #svg-container {
-        width: 150px;  /* Even smaller on mobile */
+        width: 150px;  
     }
-}
+}*/
+
+/* Wrapper to handle the full animation width */
+.animation-wrapper {
+    width: 100vw;
+    position: relative;
+    overflow: hidden;
+    left: 50%;
+    transform: translateX(-50%);
+    background-color: transparent;
+  }
+  
+  #svg-container {
+    position: relative;
+    width: 100%;
+    max-width: 200px;
+    margin: 0 auto;
+  }
+  
+  #svg-container svg {
+    width: 100%;
+    height: auto;
+    display: block;
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+  }
+  
+  @media (max-width: 768px) {
+    #svg-container {
+      max-width: 150px;
+    }
+  }
 
 .navbar-bottom {
     position: fixed;
